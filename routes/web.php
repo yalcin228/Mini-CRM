@@ -5,7 +5,7 @@ use App\Http\Controllers\backend\AdminLoginController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\AdminCompaniesController;
 use App\Http\Controllers\backend\AdminEmployeeController;
-use App\Http\Controllers\backend\LanguageController;
+use App\Http\Controllers\backend\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +38,5 @@ Route::prefix('admin')->middleware('isAdmin')->group(function () {
     Route::post('company-delete',[AdminCompaniesController::class,'deleted'])->name('company.deleted');
     Route::resource('employee',AdminEmployeeController::class);
     Route::post('employee-delete',[AdminEmployeeController::class,'deleted'])->name('employee.deleted');
-   
+    Route::get('send-mail',[MailController::class,'sendEmail'])->name('email');
 });

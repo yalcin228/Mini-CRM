@@ -61,7 +61,7 @@ class AdminCompaniesController extends Controller
             
           }
         }
-        return redirect()->route('company.index')->withStore('Yeni Şirkət əlavə edildi');
+        return redirect()->route('email');
     }
 
     /**
