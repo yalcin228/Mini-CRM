@@ -13,7 +13,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">İşçi Əlavə Etmə Formu</h3>
+        <h3 class="card-title">{{__("language.employeeaddh3")}}</h3>
 
     
     </div>
@@ -29,33 +29,33 @@
       <form action="{{route('employee.store')}}" method="post" >
           @csrf
             <div class="mb-3">
-                <label for="first_name">İşçi Adı</label>
-                <input type="text" class="form-control" id="first_name" name="first_name" value="{{old('first_name')}}" placeholder="İşçinin Adını daxil edin...">
+                <label for="first_name">{{__("language.employeeaddfname")}}</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" value="{{old('first_name')}}" placeholder="{{__("language.employeeaddfnameph")}}">
             </div>
             <div class="mb-3">
-                <label for="last_name">İşçi Soyadı</label>
-                <input type="text" class="form-control" id="last_name" name="last_name" value="{{old('last_name')}}" placeholder="İşçinin Soyadını daxil edin...">
+                <label for="last_name">{{__("language.employeeaddlname")}}</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" value="{{old('last_name')}}" placeholder="{{__("language.employeeaddlnameph")}}">
             </div>
             <div class="mb-3">
-                <label for="">Şirkət Adları</label>
+                <label for="">{{__("language.employeeaddcname")}}</label>
                 <select name="companie" class="form-control" id="">
-                    <option value="">Seçim edin</option>
+                    <option value="">{{__("language.employeeaddcnameph")}}</option>
                     @foreach ($companie as $company)
                         <option  value="{{$company->id}}">{{$company->name}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="mb-3">
-                <label for="email">İşçi Email addresi</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="İşçinin Email adresini daxil edin...">
+                <label for="email">{{__("language.employeeaddemail")}}</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="{{__("language.employeeaddemailph")}}">
             </div>
             <div class="mb-3">
-                <label for="phone">İşçinin Əlaqə Nömrəsi</label>
-                <input type="text" class="form-control" id="phone" name="phone" value="{{old('phone')}}" placeholder="İşçinin əlaqə nömrəsini daxil edin...">
-                <small><b>Nümunə: </b>0703107166</small>
+                <label for="phone">{{__("language.employeeaddphone")}}</label>
+                <input type="text" class="form-control" id="phone" name="phone" value="{{old('phone')}}" placeholder="{{__("language.employeeaddphoneph")}}">
+                <small><b>{{__("language.employeeaddphonesm")}} </b>0703107166</small>
             </div>
 
-            <button type="submit" class="btn btn-success">Əlavə Et</button>
+            <button type="submit" class="btn btn-success">{{__("language.employeeaddbtn")}}</button>
       </form>
       
     </div>

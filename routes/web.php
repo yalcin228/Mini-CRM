@@ -5,6 +5,8 @@ use App\Http\Controllers\backend\AdminLoginController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\AdminCompaniesController;
 use App\Http\Controllers\backend\AdminEmployeeController;
+use App\Http\Controllers\backend\LanguageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,20 +18,25 @@ use App\Http\Controllers\backend\AdminEmployeeController;
 |
 */
 
+
+
 // Admin Login Route
 Route::prefix('admin')->middleware('isLogin')->group(function () {
+    
     Route::get('login',[AdminLoginController::class,'login'])->name('admin.login');
     Route::post('login',[AdminLoginController::class,'post_login']);
+   
 });
 
 
 // Admin Pages Route
 Route::prefix('admin')->middleware('isAdmin')->group(function () {
+    
     Route::get('/',[AdminController::class,'index'])->name('admin.index');
     Route::get('logout',[AdminLoginController::class,'logout'])->name('admin.logout');
     Route::resource('company',AdminCompaniesController::class);
     Route::post('company-delete',[AdminCompaniesController::class,'deleted'])->name('company.deleted');
     Route::resource('employee',AdminEmployeeController::class);
     Route::post('employee-delete',[AdminEmployeeController::class,'deleted'])->name('employee.deleted');
-
+   
 });

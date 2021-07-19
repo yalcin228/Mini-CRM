@@ -38,11 +38,12 @@
   </head>
   <body class="text-center">
     
+
 <main class="form-signin">
   <form method="POST" action="">
     @csrf
     <img class="mb-4"  src="{{asset('backend/assets/brand/bootstrap-logo.svg')}}" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Giriş Səhifəsi</h1>
+    <h1 class="h3 mb-3 fw-normal">{{__("language.login")}}</h1>
    
    
    
@@ -52,12 +53,18 @@
     </div>
     <div class="form-floating">
       <input type="password"  name="password" class="form-control" id="floatingPassword" placeholder="Şifrə">
-      <label for="floatingPassword">Şifrə</label>
+      <label for="floatingPassword">{{__("language.password")}}</label>
     </div>
 
     
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş et</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">{{__("language.btnlogin")}}</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    <div class="language">
+      <p>Language:</p>
+      <a href="">Az</a>
+      <a href="">En</a>
+    </div>
+    
   </form>
 </main>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

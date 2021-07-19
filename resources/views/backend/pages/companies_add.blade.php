@@ -13,7 +13,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Şirkətlər Əlavə Etmə Formu</h3>
+        <h3 class="card-title">{{__("language.companyaddh3")}}</h3>
 
     
     </div>
@@ -29,23 +29,24 @@
       <form action="{{route('company.store')}}" method="post" enctype="multipart/form-data">
           @csrf
             <div class="mb-3">
-                <label for="name">Şirkət Adı</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" placeholder="Şirkət adı daxil edin...">
+                <label for="name">{{__("language.companyaddname")}}</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" placeholder="{{__("language.companyaddnameph")}}">
             </div>
             <div class="mb-3">
-                <label for="email">Şirkətin Email addresi</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="Şirkətin Email adresini daxil edin...">
+                <label for="email">{{__("language.companyaddemail")}}</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="{{__("language.companyaddemailph")}}">
             </div>
             <div class="custom-file mb-3">
+                
                 <input type="file" name="image" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">File seçin</label>
+                <label class="custom-file-label" for="customFile">{{__("language.companyaddfileph")}}</label>
             </div>
             <div class="mb-3">
-                <label for="website">Şirkətin Website addresi</label>
-                <input type="text" class="form-control" id="website" name="website" value="{{old('website')}}" placeholder="Şirkətin Website adresini daxil edin...">
+                <label for="website">{{__("language.companyaddwebsite")}}</label>
+                <input type="text" class="form-control" id="website" name="website" value="{{old('website')}}" placeholder="{{__("language.companyaddwebsiteph")}}">
             </div>
 
-            <button type="submit" class="btn btn-success">Əlavə Et</button>
+            <button type="submit" class="btn btn-success">{{__("language.companyaddbtn")}}</button>
       </form>
       
     </div>

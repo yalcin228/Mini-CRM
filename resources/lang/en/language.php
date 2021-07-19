@@ -1,0 +1,92 @@
+<?php
+
+    return[
+        "login"             =>      "Please sign in",
+        "password"          =>      "Password",
+        "btnlogin"          =>      "Sign in",
+        "menuhome"          =>      "Home",
+        "menucompany"       =>      "Companies",
+        "menuemployee"      =>      "Employees",
+        "logout"            =>      "Logout",
+        "indexh1"           =>      "Home Page",
+        "companyh1"         =>      "Companie List",
+        "companyadd"        =>      "Add to new companie",
+        "companyname"       =>      "Companie Name",
+        "companywebsite"    =>      "Website address",
+        "companybtnedit"    =>      "Update",
+        "companybtndelete"  =>      "Delete",
+        "companywork"       =>      "Works",
+        "dtafter"           =>      "Next",
+        "dtbefore"          =>      "Previous",
+        "dtempyt"           =>      "No data available in table",
+        "dtprocessing"      =>      "Loading Data...",
+        "dtdatashow"        =>      "Data from",
+        "dtdatashowlength"  =>      "the data between are displayed",
+        "dtfiltered"        =>      "found in the data",
+        "dtpage"            =>      "Display",
+        "dtlengthmenu"      =>      "records per page",
+        "dtloading"         =>      "Loading...",
+        "dtsearch"          =>      "Search:",
+        "dtrecords"         =>      "No data available in table",
+        
+        //Company ADD page
+         "companyaddh3"        =>    "Companies Addition Form",
+         "companyaddname"      =>    "Companie Name",
+         "companyaddnameph"    =>    "Entered Companie name...",
+         "companyaddemail"     =>    "Email address of the company",
+         "companyaddemailph"   =>    "Enter the company's email address...",
+         "companyaddfile"      =>    "Select the company logo",
+         "companyaddfileph"    =>    "Select the company logo",
+         "companyaddwebsite"   =>    "Company Website address",
+         "companyaddwebsiteph" =>    "Enter the company's Website address...",
+         "companyaddbtn"       =>    "Add new Companie",
+
+        //Comapany Edit Page
+        "companyedith3"        =>    "Company Data Update Form",
+        "companyeditname"      =>    "Companie Name",
+        "companyeditemail"     =>    "Email address of the company",
+        "companyeditfile"      =>    "Current Company Logo",
+        "companyeditfileph"    =>    "Choos a new logo",
+        "companyeditwebsite"   =>    "Company Website address",
+        "companyeditbtn"       =>    "Update",
+
+        //Employee Page
+        "employeeh3"           =>    "List of Employee",
+        "employeebtnadd"       =>    "Add new Employee",
+        "employeefname"        =>    "First Name",
+        "employeelname"        =>    "Last Name",
+        "employeecname"        =>    "Companie Name",
+        "employeephone"        =>    "Phone",
+        "employeework"         =>    "Works",
+        "employeeupdate"       =>    "Update",
+        "employeedelete"       =>    "Delete",
+
+        //Employee Add Page 
+        "employeeaddh3"        =>     "Employee Addition Form",
+        "employeeaddfname"     =>     "Employee's First Name",
+        "employeeaddfnameph"   =>     "Enter the employee's first name ...",
+        "employeeaddlname"     =>     "Employee's Last Name",
+        "employeeaddlnameph"   =>     "Enter the employee's last name ...",
+        "employeeaddcname"     =>     "Company Name",
+        "employeeaddcnameph"   =>     "Choose a company name ...",
+        "employeeaddemail"     =>     "Employee's email address",
+        "employeeaddemailph"   =>     "Enter the Employee's Email address",
+        "employeeaddphone"     =>     "Employee Contact Number",
+        "employeeaddphoneph"   =>     "Enter the Employee Contact Number ...",
+        "employeeaddphonesm"   =>     "Example:",
+        "employeeaddbtn"       =>     "Add new employee",
+
+        //Employee Edit Page
+        "employeeupdateh3"      =>    "Employee's Data Update Form",
+        "employeeupdatefname"   =>    "Employee's First Name",
+        "employeeupdatelname"   =>    "Employee's Last Name",
+        "employeeupdatecname"   =>    "Companie Name",
+        "employeeupdatecnameph" =>    "Choose a company name ...",
+        "employeeupdateemail"   =>    "Employee's email address",
+        "employeeupdatephone"   =>    "Employee's contanct phone",
+        "employeeupdatephonesm" =>    "Example:", 
+        "employeeupdatebtn"     =>    "Update",
+
+    ];
+
+?>

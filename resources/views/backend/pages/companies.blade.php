@@ -13,10 +13,10 @@
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Sirketler Siyahı</h3>
+        <h3 class="card-title">{{__("language.companyh1")}}</h3>
 
       <div class="card-tools">
-        <a href="{{route('company.create')}}" class="btn btn-success"><i class="fas fa-plus"></i> Şirkət əlavə et</a>
+        <a href="{{route('company.create')}}" class="btn btn-success"><i class="fas fa-plus"></i>{{__("language.companyadd")}}</a>
         
       </div>
     </div>
@@ -26,11 +26,11 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Şirkət Adı</th>
+                    <th>{{__("language.companyname")}}</th>
                     <th>Email</th>
                     <th>Logo</th>
-                    <th>WebSite </th>
-                    <th>İşləmlər</th>
+                    <th>{{__("language.companywebsite")}}</th>
+                    <th>{{__("language.companywork")}}</th>
                 </tr>
             </thead>
          
@@ -43,10 +43,10 @@
                     <td>{{$item->email}}</td>
                     <td><img style="height: 100px;width:100px;" src="{{asset('storage/images')}}/{{$item->logo}}" alt=""></td>
                     <td>{{$item->website}}</td>
-                    <td width="150px">
-                        <a href="{{route('company.edit',$item->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i> Yenilə</a>
+                    <td width="200px">
+                        <a href="{{route('company.edit',$item->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i>{{__("language.companybtnedit")}}</a>
                         
-                        <button class="btn btn-danger" onclick="deleteCompany({{$item->id}})"><i class="fas fa-trash"></i> Sil</button>
+                        <button class="btn btn-danger" onclick="deleteCompany({{$item->id}})"><i class="fas fa-trash"></i>{{__("language.companybtndelete")}}</button>
                         
                       </td>
                 </tr>
@@ -70,22 +70,22 @@
     $(function () {
       $("#dataTable_1").DataTable({
         "language": {
-            "emptyTable": "Göstəriləcək veri yoxdur.",
-            "processing": "Veriler yüklənir...",
+            "emptyTable": "{{__("language.dtempyt")}}",
+            "processing": "{{__("language.dtprocessing")}}",
             "sDecimal": ".",
-            "sInfo": "_TOTAL_ veridən _START_ - _END_ arasındaki verilər göstərilir",
-            "sInfoFiltered": "(_MAX_ kayıt içerisinden bulunan)",
+            "sInfo": "_TOTAL_ {{__("language.dtdatashow")}} _START_ - _END_ {{__("language.dtdatashowlength")}}",
+            "sInfoFiltered": "(_MAX_ {{__("language.dtfiltered")}})",
             "sInfoPostFix": "",
             "sInfoThousands": ".",
-            "sLengthMenu": "Səhifədə _MENU_ kayıt göstər",
-            "sLoadingRecords": "Yükləniyor...",
-            "sSearch": "Axtar:",
-            "sZeroRecords": "Uyğun nəticə tapılmadı",
+            "sLengthMenu": "{{__("language.dtpage")}} _MENU_ {{__("language.dtlengthmenu")}}",
+            "sLoadingRecords": "{{__("language.dtloading")}}",
+            "sSearch": "{{__("language.dtsearch")}}",
+            "sZeroRecords": "{{__("language.dtrecords")}}",
             "oPaginate": {
                 "sFirst": "İlk",
                 "sLast": "Son",
-                "sNext":     "Sonra",
-                "sPrevious": "Əvvəl"
+                "sNext":     "{{__("language.dtafter")}}",
+                "sPrevious": "{{__("language.dtbefore")}}"
                
             },
             "oAria": {
